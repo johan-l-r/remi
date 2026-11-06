@@ -1,0 +1,17 @@
+*, 
+*::before, 
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+fieldset, 
+input,
+button {
+	border: 0;
+}
+input,
+button {
+	outline: 0;
+}
+
