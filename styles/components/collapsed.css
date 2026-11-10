@@ -1,5 +1,8 @@
+@import url("../variables.css");
+
 .collapsed {
 	display: flex;
+	gap: var(--xs-spacing);
 	flex-direction: column;
 }
 

@@ -1,0 +1,19 @@
+:root {
+	--sm-spacing: 1rem;
+	--xs-spacing: 0.625rem;
+}
+:root[data-theme="light"] {
+	--bg: #F3F2EE;
+	--surface: #FFFFFF;
+	--ink: #1E2320;
+
+	--border: #1E2320;
+
+	--main-action: #2B3A67;
+	--secondary-action: #E1E5EF;
+	--action-fg: #FFFFFF;
+	--valid: #2F6B47;
+	--notes: #8A5A0E;
+	--notes-bg: #F6E7CC;
+	--error: #A13F3F;
+}

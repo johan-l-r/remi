@@ -1,0 +1,19 @@
+@import url("../variables.css");
+
+.step {
+	display: none;	
+	padding: var(--sm-spacing);
+}
+.step--active {
+	display: block;
+}
+.step__fields {
+	display: flex;
+	flex-direction: column;
+	gap: var(--xs-spacing);
+}
+.field {
+	display: flex;
+	gap: 0.375rem;
+	flex-direction: column;
+

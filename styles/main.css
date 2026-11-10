@@ -1,5 +1,8 @@
 @import url("./base/reset.css");
-
-@import url("./components/collapsed.css");
+@import url("./variables.css"); 
 
 @import url("./utilities/layout.css");
+
+@import url("./components/collapsed.css");
+@import url("./components/input.css");
+@import url("./components/step.css");

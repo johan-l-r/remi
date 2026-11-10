@@ -1,0 +1,6 @@
+@import url("../variables.css");
+
+input {
+	padding: var(--xs-spacing);
+	border: 1px solid var(--border);
+}
