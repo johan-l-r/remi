@@ -1,12 +1,15 @@
 @import url("../variables.css");
 
 .button {
-	border-radius: 5px;
-	padding: var(--sm-spacing);
 	width: 100%;
+	padding: var(--sm-spacing);
+	border-radius: 5px;
 	cursor: pointer;
 }
-.button--next {
+.button--main {
 	background-color: var(--main-action);
 	color: var(--action-fg);
+}
+.button--secondary {
+	background-color: var(--secondary-action);
 }

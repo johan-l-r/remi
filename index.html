@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<form action="">
-			<fieldset class="step step--active full-height">
+			<fieldset class="step step--active">
 				<h2 class="step__title">Información General</h2>
 
 				<div class="step__fields">
@@ -40,9 +40,19 @@
 				</div>
 
 				<div class="step__controls">
-					<button class="button button--next">Siguiente</button>
+					<button class="button button--next button--main" type="button">Siguiente</button>
+				</div>
+			</fieldset>
+
+			<fieldset class="step">
+				<h2>Cantidades</h2>
+				<div class="step__controls">
+					<button class="button button--prev button--secondary" type="button">Anterior</button>
+					<button class="button button--next button--main" type="button">Siguiente</button>
 				</div>
 			</fieldset>
 		</form>
+
+		<script src="./index.js" type="module"></script>
 	</body>
 </html>
