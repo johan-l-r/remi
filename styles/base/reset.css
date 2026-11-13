@@ -10,8 +10,12 @@ input,
 button {
 	border: 0;
 }
+
 input,
 button {
 	outline: 0;
 }
 
+li {
+	list-style-type: none;
+}

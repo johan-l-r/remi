@@ -1,0 +1,15 @@
+@import url("../variables.css");
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.list__item {
+	text-transform: capitalize;
+	background-color: var(--secondary-action);
+	padding: 6px var(--sm-spacing);
+	width: fit-content;
+	border-radius: 15px;
+}
+

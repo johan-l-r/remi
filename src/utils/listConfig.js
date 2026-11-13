@@ -6,6 +6,7 @@ const listConfig = {
 		listName: state.colors, 
 		model: Color, 
 		targetSelector: ".color-list",
+		emptyMessage: "No has agregado colores."
 	},
 }
 
