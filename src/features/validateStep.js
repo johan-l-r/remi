@@ -9,7 +9,7 @@ const validateStep = () => {
 				const requiredFields = state.getForm().querySelectorAll("[required]")
 
 				return Array.from(requiredFields).every((field) => {
-					return field.value.trim() !== ""
+					return field.value.trim() !== "" && state.colors.length > 0
 				})
 			}
 		}, 
