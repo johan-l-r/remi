@@ -8,8 +8,10 @@
 .list__item {
 	text-transform: capitalize;
 	background-color: var(--secondary-action);
+	color: var(--main-action);
 	padding: 6px var(--sm-spacing);
 	width: fit-content;
+	border: 1px solid var(--main-action);
 	border-radius: 15px;
 }
 

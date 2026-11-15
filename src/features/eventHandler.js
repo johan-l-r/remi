@@ -4,6 +4,7 @@ import state from "../state.js"
 
 import addToList from "../utils/addToList.js"
 import renderList from "../utils/renderList.js"	
+import removeFromList from "../utils/removeFromList.js"
 
 import listConfig from "../utils/listConfig.js"
 
@@ -33,14 +34,35 @@ const handleEvents = () => {
 	})
 
 	state.getForm().addEventListener("click", (event) => {
+		// form navigation 
 		if(event.target.classList.contains("button--prev")) 
 			goToPreviousStep()
+		if(event.target.classList.contains("button--next") && getStepValidity())	
+			goToNextStep()
 
-		if(!getStepValidity())
+		const delButton = event.target.closest(".button--del")
+
+		if(!delButton) 
+			return
+
+		let config = listConfig[delButton.dataset.targetList]
+
+		if(!config)
 			return 
 
-		if(event.target.classList.contains("button--next"))	
-			goToNextStep()
+		// removing an item 
+		if(delButton) {
+			removeFromList(
+				config.listName,
+				delButton.dataset.name
+			)
+
+			renderList(
+				config.targetSelector, 
+				config.listName, 
+				config.emptyMessage
+			)
+		}
 	})
 }
 
