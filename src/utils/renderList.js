@@ -1,8 +1,8 @@
 const renderList = (targetSelector, list, meptyMessage) => {
 	const target = document.querySelector(targetSelector)
 
-	if(list.length == 0) {
-		target.innerhtml = meptyMessage
+	if(list.length === 0) {
+		target.innerHTML = meptyMessage
 	} else {
 		// clear the list and re-render
 		target.innerHTML = ""
