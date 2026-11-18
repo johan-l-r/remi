@@ -3,6 +3,8 @@
 .step {
 	position: relative;
 	display: none;	
+  min-height: 100vh;   
+  min-height: 100dvh;  
 	padding: var(--sm-spacing);
 }
 .step--active {
