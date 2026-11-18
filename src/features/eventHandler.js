@@ -9,6 +9,8 @@ import removeFromList from "../utils/removeFromList.js"
 import listConfig from "../utils/listConfig.js"
 
 const handleEvents = () => {
+	const lists = state.getForm().querySelectorAll("[data-target-list]")
+
 	state.getForm().addEventListener("keyup", (event) => {
 		let config = listConfig[event.target.dataset.targetList]
 
@@ -63,6 +65,17 @@ const handleEvents = () => {
 				config.emptyMessage
 			)
 		}
+	})
+
+	// auto render list state
+	lists.forEach((list) => {
+		const target = list.dataset.targetList
+
+		renderList(
+			listConfig[target].targetSelector, 
+			listConfig[target].listName, 
+			listConfig[target].emptyMessage
+		)
 	})
 }
 
