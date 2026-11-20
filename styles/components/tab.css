@@ -4,7 +4,7 @@
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 	gap: 2px;
-	background-color: var(--bg);
+	background-color: var(--secondary-action);
 	padding: 2px;
 	border-radius: 5px;
 }
@@ -14,4 +14,11 @@
 	padding: var(--xs-spacing) var(--sm-spacing);
 	border-radius: 5px;
 	cursor: pointer;
+}
+.tab:hover {
+	background-color: var(--secondary-action);
+}
+.tab:has(input:checked) {
+	background-color: var(--main-action);
+	color: var(--action-fg);
 }
