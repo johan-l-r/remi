@@ -7,13 +7,32 @@ const listConfig = {
 		listName: state.colors, 
 		model: Color, 
 		targetSelector: "[data-list-name='colors']",
-		emptyMessage: "No has agregado colores."
+		emptyMessage: "No has agregado colores.", 
+
+		onChange: () => {
+			state.getColorSelect().innerHTML = ""
+
+			state.colors.forEach((color) => {
+				state.getColorSelect().insertAdjacentHTML(
+					"beforeend", 
+					`
+						<label class="tab">
+							${color.getName()}
+							<input type="radio" name="selected-color">
+						</label>
+					`
+				)	
+			})
+		}
 	},   
 	sizes: {
 		listName: state.sizes, 
 		model: Size, 
 		targetSelector: "[data-list-name='sizes']",
-		emptyMessage: "No has agregado tallas."
+		emptyMessage: "No has agregado tallas.", 
+
+		onChange: () => {
+		}
 	}
 }
 
