@@ -11,6 +11,9 @@ const state = {
 	], 
 
 	getForm: () => document.querySelector("form"), 
+	getGroupsContainer: () => document.querySelector(".groups-container"), 
+	getColorSelect: () => document.querySelector("#color-select"), 
+
 	getCurrentStepIndex: () => {
 		const index = document.querySelector(".step--active").dataset.stepIndex
 
