@@ -5,10 +5,6 @@ class SizeGroup extends Group {
 	constructor(name) {
 		super(name)
 	}
-
-	render = () => {
-		
-	}
 	
 	#createTable = () => {
 		state.getGroupsContainer().insertAdjacentHTML(
@@ -24,10 +20,24 @@ class SizeGroup extends Group {
 				</article>
 			`
 		)
-	} 
+	}
+
+	#fillTable = () => {
+		state.sizes.forEach((size) => {
+			state.getGroupsContainer().lastElementChild
+				.querySelector(".table__content").insertAdjacentHTML(
+				"beforeend",
+				`
+					<span class="text-center text-uppercase">${size.getName()}</span>
+					<input type="text" inputmode="numeric" pattern="[0-9]*" value="0">
+				`
+			)
+		})		
+	}
 
 	render = () => {
 		this.#createTable()
+		this.#fillTable()
 	}
 }
 
