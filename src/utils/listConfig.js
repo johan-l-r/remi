@@ -1,6 +1,7 @@
 import Color from "../models/Color.js"
 import Size from "../models/Size.js"
 import state from "../state.js"
+import { renderSizeGroups } from "../features/selectColor.js"
 
 const listConfig = {
 	colors: {
@@ -16,7 +17,7 @@ const listConfig = {
 				state.getColorSelect().insertAdjacentHTML(
 					"beforeend", 
 					`
-						<label class="tab">
+						<label class="tab" data-value="${color.getName()}">
 							${color.getName()}
 							<input type="radio" name="selected-color">
 						</label>
@@ -32,6 +33,7 @@ const listConfig = {
 		emptyMessage: "No has agregado tallas.", 
 
 		onChange: () => {
+			renderSizeGroups()
 		}
 	}
 }

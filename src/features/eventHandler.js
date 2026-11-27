@@ -1,4 +1,6 @@
 import { goToNextStep, goToPreviousStep } from "./navigateForm.js"
+import { selectColor, renderSizeGroups } from "./selectColor.js"	
+
 import getStepValidity from "./validateStep.js"
 import state from "../state.js"
 
@@ -31,18 +33,25 @@ const handleEvents = () => {
 				config.emptyMessage
 			)
 
+			config.onChange()
+
 			event.target.value = ""
 		}
 	})
 
 	state.getForm().addEventListener("click", (event) => {
+		const delButton = event.target.closest(".button--del")
+
 		// form navigation 
 		if(event.target.classList.contains("button--prev")) 
 			goToPreviousStep()
 		if(event.target.classList.contains("button--next") && getStepValidity())	
 			goToNextStep()
 
-		const delButton = event.target.closest(".button--del")
+		if(event.target.classList.contains("tab")) {
+			selectColor(event.target.dataset.value)
+			renderSizeGroups()
+		}
 
 		if(!delButton) 
 			return
@@ -64,6 +73,8 @@ const handleEvents = () => {
 				config.listName, 
 				config.emptyMessage
 			)
+
+			config.onChange()
 		}
 	})
 

@@ -1,8 +1,17 @@
 import Group from "./Group.js"
+import SizeGroup from "./SizeGroup.js"		
 
 class Color extends Group {
 	constructor(name) {
 		super(name)
+
+		this._members = [
+			new SizeGroup("primeras"), 
+			new SizeGroup("segundas"), 
+			new SizeGroup("set de tallas"), 
+			new SizeGroup("muertos"), 
+			new SizeGroup("cobros"), 
+		]
 	}
 
 	render = () => {
